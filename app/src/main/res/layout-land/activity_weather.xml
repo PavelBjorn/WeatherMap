@@ -9,6 +9,7 @@
     <include layout="@layout/app_bar" />
 
     <LinearLayout
+        android:id="@+id/weather_activity_ll_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="@dimen/activity_vertical_margin"
@@ -88,5 +89,31 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/weather_activity_ll_errorContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/weather_activity_tv_errorMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/weather_activity_tv_errorMessageText"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/weather_activity_tv_errorMessage_textSize" />
+
+        <Button
+            android:id="@+id/weather_activity_btn_tryAgain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="tryAgainClick"
+            android:text="@string/weather_activity_btn_tryAgain" />
+
+    </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>
