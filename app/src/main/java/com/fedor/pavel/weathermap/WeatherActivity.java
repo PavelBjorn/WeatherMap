@@ -289,9 +289,9 @@ public class WeatherActivity extends AppCompatActivity implements Callback<Weath
 
             double tempMax = weatherModel.getTemp().getMaxTemp();
 
-            tvTem.setText((temp >= 0 ? "+" : "-") + temp + "°");
+            tvTem.setText((temp >= 0 ? "+" : "") + temp + "°");
 
-            String str = (tempMin >= 0 ? "+" : "-");
+            String str = (tempMin >= 0 ? "+" : "");
 
             tvTempMinMax.setText("(" + str + tempMin + "°"
                     + "  " + str +
